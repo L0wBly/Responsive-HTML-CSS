@@ -1,0 +1,129 @@
+/* =============== RESET =============== */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =============== VARIABLE =============== */
+
+:root {
+    --background: #F2F1F4;
+    --bleu-fonce: #0589D8;
+    --bleu-hover: #1870A5;
+    --bleu-aside: #95C8E7; 
+    --marge-main: 1rem;
+    --text-color: rgb(80, 79, 79);
+    --marge-texte: 2rem
+}
+
+/* ============= SETUP ================ */
+
+body {
+    min-height: 100vh;
+    font-family: sans-serif;
+    background: var(--background);
+}
+
+/* ============= HEADER ================ */
+
+header {
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav {
+    background: var(--bleu-fonce);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+header nav a {
+    color: var(--background);
+    padding: 1.5rem 2.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+header nav a:hover {
+    background: var(--bleu-hover);
+}
+
+/* =========== MAIN ============ */
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+}
+
+main h1,
+main h2 {
+    color: var(--background);
+    background: var(--bleu-fonce);
+    padding: 1rem .5rem;
+}
+
+main article {
+    width: 70%;
+    padding: var(--marge-main);
+    display: flex;
+    flex-direction: column;
+    gap: var(--marge-main);
+}
+
+main aside {
+    background: var(--bleu-aside);
+    width: 30%;
+    padding: var(--marge-main);
+    display: flex;
+    flex-direction: column;
+    gap: var(--marge-main);
+}
+
+article p,
+aside p {
+    color: var(--text-color);
+    line-height: var(--marge-texte);
+}
+
+/* =========== MEDIA QUERY ============ */
+
+@media screen and (max-width: 1000px) {
+    main {
+        flex-direction: column;
+    }
+
+    main article,
+    main aside {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    header nav a {
+        width: 100%;
+        text-align: center;
+    }
+}

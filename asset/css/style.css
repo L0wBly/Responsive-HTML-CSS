@@ -58,10 +58,17 @@ header nav a {
     padding: 1.5rem 2.5rem;
     white-space: nowrap;
     overflow: hidden;
+    display: flex;
+    gap: 10px;
 }
 
 header nav a:hover {
     background: var(--bleu-hover);
+}
+
+header nav a i {
+    color: black;
+    
 }
 
 /* =========== MAIN ============ */
